@@ -28,9 +28,10 @@ const server = app.listen(PORT, () => {
 const io = require('socket.io')(server, {
     pingTimeout: 60000,
     cors: {
-        origin: "https://talkative18.netlify.app/",
+        origin: "https://talkative18.netlify.app",
     },
-})
+});
+
 
 io.on("connection", (socket) => {
     console.log('connected to socket.io');
