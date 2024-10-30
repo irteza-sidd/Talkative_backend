@@ -19,7 +19,9 @@ app.use(express.json());
 app.use('/api/user', userRoutes);
 app.use('/api/chat', chatRoutes);
 app.use('/api/message', messageRoutes);
-
+app.get('/',(req,res)=>{
+    res.send('server is up');
+})
 
 const server = app.listen(PORT, () => {
     console.log(`Server is running on ${PORT}`);
